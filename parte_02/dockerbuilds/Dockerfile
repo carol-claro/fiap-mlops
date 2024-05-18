@@ -1,5 +1,5 @@
 FROM python:3.10
-LABEL maintainer="Pedro MOREIRA"
+LABEL maintainer="Caroline Correa"
 LABEL version="1.0"
 
 RUN apt-get update
@@ -16,4 +16,4 @@ RUN pip install -r /myServer/requirements.txt
 
 EXPOSE 8080
 
-CMD [ "python", "inference.py" ]
+CMD [ "python", "05_clusterizacao_flask.py" ]
