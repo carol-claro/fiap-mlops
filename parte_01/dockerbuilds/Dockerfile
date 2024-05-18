@@ -16,4 +16,4 @@ RUN pip install -r /myServer/requirements.txt
 
 EXPOSE 8080
 
-CMD [ "python", "inference.py" ]
+CMD [ "python", "02_modelo_logit_flask.py" ]
