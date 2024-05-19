@@ -18,9 +18,3 @@ bash ./parte_03/update_config.sh
 
 echo "Config model manager"
 docker run -d --restart always --network plat_network -v $(pwd)/parte_03/docker/config:/myServer/config -v $(pwd)/parte_03/docker/log:/myServer/log --name modelmanager modelmanager
-
-echo "Updating microservices.json for access API from Frontend"
-bash ./parte_04/update_config.sh
-
-echo "Config FrontEnd"
-docker run -d --restart always --network plat_network -p 80:8501 -v $(pwd)/parte_04/docker/config:/myServer/config --name frontendstreamlit frontendstreamlit
